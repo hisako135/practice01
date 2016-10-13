@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xml:lang="ja" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+    .filterSelectorWContainer {
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+    #viewArea {
+      margin: 0 0 30px 0;
+    }
+    #rippleWrapper {
+        text-align: center;
+    }
+    #ripple {
+      align-items:center;
+      background-color: rgb(255,64,129);
+      border: 0;
+      border-radius: 400px;
+      box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+      color: white;
+      display: flex;
+      font-size: 24px;
+      height: 200px;
+      justify-content:center;
+      margin: 0 auto;
+      width: 200px;
+
+      --ripple-x: 0;
+      --ripple-y: 0;
+      --ripple-color: rgba(255,255,255,0.54);
+      --animation-tick: 0;
+    }
+    #ripple:focus {
+      outline: none;
+    }
+    #ripple.hidden {
+      display: none;
+    }
+    #ripple.animating {
+      background-image: paint(ripple);
+    }
+    </style>
+</head>
+
+    <div class="container">
+        <div class="page-header">
+            <h4>Java寿司ript</h4>
+        </div>
+        <div class="filterSelectorWContainer">
+            <select id="filterSelector" class="btn btn-default btn-lg dropdown-toggle mb30">
+                <option value="none">コースを選んでください</option>
+                <option value="matsu">松コース</option>
+                <option value="take">竹コース</option>
+                <option value="ume">梅コース</option>
+            </select>
+        </div>
+        <div id="viewArea" data-role="page" class="page">
+        </div>
+        <div id="rippleWrapper">
+            <span id="ripple"><p class="ripple__txt">寿司食べたい</p></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
