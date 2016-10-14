@@ -1,5 +1,5 @@
 //paintworkletの読込み
-window.paintWorklet.import('paintworklet.js');
+// window.paintWorklet.import('paintworklet.js');
 
 //寿司データ
 const sushi = [
@@ -75,31 +75,30 @@ selector.addEventListener('change', function() {
       setHash(value);
 
       //さざ波起こす
-      let start = performance.now();
-      let x, y;
-      ripple.classList.remove('hidden');
-      ripple.classList.add('animating');
-      [x, y] = [ripple.offsetLeft, ripple.offsetTop];
-      start = performance.now();
+      // let start = performance.now();
+      // let x, y;
+      // ripple.classList.remove('hidden');
+      // ripple.classList.add('animating');
+      // [x, y] = [ripple.offsetLeft, ripple.offsetTop];
+      // start = performance.now();
 
-      requestAnimationFrame(function raf(now) {
+      // requestAnimationFrame(function raf(now) {
 
-        const count = Math.floor(now - start);
+      //   const count = Math.floor(now - start);
 
-        paintRipple(course,value, count); //丸の大きさ
-        rippleMsg(course,value); //メッセージ表示
+      //   paintRipple(course,value, count); //丸の大きさ
+      //   rippleMsg(course,value); //メッセージ表示
 
-        //さざ波終わらせる
-        if(count > 1000) {
-          ripple.classList.remove('animating');
-          paintRipple(course,value, 0);
-          ripple.innerHTML = `合計金額：${totalPrice}円<br>総カロリー：${totalCal}kcal`;
-          return;
-        }
-        requestAnimationFrame(raf);
-      })
+      //   //さざ波終わらせる
+      //   if(count > 1000) {
+      //     ripple.classList.remove('animating');
+      //     paintRipple(course,value, 0);
+      //     ripple.innerHTML = `合計金額：${totalPrice}円<br>総カロリー：${totalCal}kcal`;
+      //     return;
+      //   }
+      //   requestAnimationFrame(raf);
+      // })
   }
-
 },'');
 
 //初期化
