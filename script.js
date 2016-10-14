@@ -80,6 +80,7 @@ selector.addEventListener('change', function() {
       [x, y] = [ripple.offsetLeft, ripple.offsetTop];
       start = performance.now();
 
+      //アニメーション
       requestAnimationFrame(function raf(now) {
 
         const count = Math.floor(now - start);
@@ -152,7 +153,7 @@ function rippleMsg (dataArray, name) {
   return  ripple.innerHTML = `${item[0].msg}`;
 };
 
-// //URLにハッシュつける
+//URLにハッシュつける
 function setHash(course){
   return location.hash = `${course}`;
 };
