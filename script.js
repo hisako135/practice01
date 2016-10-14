@@ -62,13 +62,13 @@ selector.addEventListener('change', function() {
       //合計金額を計算
       let totalPrice = sushiFiltered.reduce(function(prev,current,index){
         return prev + current.price;
-      });
+      },);
       console.log(totalPrice);
 
       //総カロリー量を計算
       let totalCal = sushiFiltered.reduce(function(prev,current,index){
         return prev + current.cal;
-      });
+      },);
       console.log(totalCal);
 
       //URLにハッシュつける
